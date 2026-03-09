@@ -1,0 +1,30 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red11\green99\blue222;\red242\green242\blue242;\red0\green0\blue0;
+}
+{\*\expandedcolortbl;;\cssrgb\c0\c48235\c89804;\cssrgb\c96078\c96078\c96078;\cssrgb\c0\c0\c0\c90196;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs23 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 import \{ defineConfig \} from 'vite'\
+import path from 'path'\
+import tailwindcss from '@tailwindcss/vite'\
+import react from '@vitejs/plugin-react'\
+\
+export default defineConfig(\{\
+  plugins: [\
+    react(),\
+    tailwindcss(),\
+  ],\
+  resolve: \{\
+    alias: \{\
+      '@': path.resolve(__dirname, './src'),\
+    \},\
+  \},\
+  assetsInclude: ['**/*.svg', '**/*.csv'],\
+\})
+\fs24\fsmilli12220 \cf4 \strokec4 \
+}

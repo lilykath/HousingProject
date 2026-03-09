@@ -1,0 +1,117 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red11\green99\blue222;\red242\green242\blue242;}
+{\*\expandedcolortbl;;\cssrgb\c0\c48235\c89804;\cssrgb\c96078\c96078\c96078;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs23 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 import \{ motion \} from "motion/react";\
+import \{ Heart, Mail \} from "lucide-react";\
+\
+export function Footer() \{\
+  const scrollToSection = (id: string) => \{\
+    const element = document.getElementById(id);\
+    element?.scrollIntoView(\{ behavior: "smooth" \});\
+  \};\
+\
+  return (\
+    <footer className="bg-gray-900 text-white py-12">\
+      <div className="container mx-auto px-6">\
+        <div className="grid md:grid-cols-3 gap-8 mb-8">\
+          <motion.div\
+            initial=\{\{ opacity: 0, y: 20 \}\}\
+            whileInView=\{\{ opacity: 1, y: 0 \}\}\
+            viewport=\{\{ once: true \}\}\
+            transition=\{\{ duration: 0.6 \}\}\
+          >\
+            <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-pink-400 bg-clip-text text-transparent">\
+              Our Collective\
+            </h3>\
+            <p className="text-gray-400">\
+              Building housing that centers people, planet, and community over profit.\
+            </p>\
+          </motion.div>\
+\
+          <motion.div\
+            initial=\{\{ opacity: 0, y: 20 \}\}\
+            whileInView=\{\{ opacity: 1, y: 0 \}\}\
+            viewport=\{\{ once: true \}\}\
+            transition=\{\{ duration: 0.6, delay: 0.1 \}\}\
+          >\
+            <h4 className="font-bold mb-4">Quick Links</h4>\
+            <ul className="space-y-2 text-gray-400">\
+              <li>\
+                <button \
+                  onClick=\{() => scrollToSection("about")\}\
+                  className="hover:text-white transition-colors"\
+                >\
+                  About Us\
+                </button>\
+              </li>\
+              <li>\
+                <button \
+                  onClick=\{() => scrollToSection("values")\}\
+                  className="hover:text-white transition-colors"\
+                >\
+                  Our Values\
+                </button>\
+              </li>\
+              <li>\
+                <button \
+                  onClick=\{() => scrollToSection("project")\}\
+                  className="hover:text-white transition-colors"\
+                >\
+                  The Project\
+                </button>\
+              </li>\
+              <li>\
+                <button \
+                  onClick=\{() => scrollToSection("support")\}\
+                  className="hover:text-white transition-colors"\
+                >\
+                  Support Us\
+                </button>\
+              </li>\
+            </ul>\
+          </motion.div>\
+\
+          <motion.div\
+            initial=\{\{ opacity: 0, y: 20 \}\}\
+            whileInView=\{\{ opacity: 1, y: 0 \}\}\
+            viewport=\{\{ once: true \}\}\
+            transition=\{\{ duration: 0.6, delay: 0.2 \}\}\
+          >\
+            <h4 className="font-bold mb-4">Get In Touch</h4>\
+            <div className="flex items-center gap-2 text-gray-400 mb-4">\
+              <Mail className="w-5 h-5" />\
+              <a href="mailto:collective@housing-project.org" className="hover:text-white transition-colors">\
+                collective@housing-project.org\
+              </a>\
+            </div>\
+            <p className="text-gray-400 text-sm">\
+              We'd love to hear from you! Whether you're interested in supporting, collaborating, or just want to learn more.\
+            </p>\
+          </motion.div>\
+        </div>\
+\
+        <motion.div\
+          initial=\{\{ opacity: 0 \}\}\
+          whileInView=\{\{ opacity: 1 \}\}\
+          viewport=\{\{ once: true \}\}\
+          transition=\{\{ duration: 0.6, delay: 0.3 \}\}\
+          className="border-t border-gray-800 pt-8 text-center text-gray-400"\
+        >\
+          <p className="flex items-center justify-center gap-2">\
+            Built with <Heart className="w-4 h-4 text-red-500" /> by our community\
+          </p>\
+          <p className="mt-2 text-sm">\
+            Housing is a human right \'95 Solidarity forever\
+          </p>\
+        </motion.div>\
+      </div>\
+    </footer>\
+  );\
+\}\
+}
